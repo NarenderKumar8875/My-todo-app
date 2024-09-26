@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Outfit;
+}
+
+img {
+    width: 50px;
+}
+
+h2 {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.done {
+    text-decoration: line-through;
+    opacity: 80%;
+}
+
+.checkBox {
+    content: ' ';
+    width: 20px;
+    height: 18px;
+    background-image: url(/img//unchek.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    padding: 1px;
+}
+
+.check::before {
+    background-image: url(/img/check.png);
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(100deg, #59016e, #a50404);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.main {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    width: 40%;
+    background: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 10px 10px 33px 0px black;
+
+}
+
+.input {
+    background: #dddbdd;
+    display: flex;
+    border-radius: 30px;
+
+}
+
+.input input {
+    font-size: 19px;
+    font-weight: 550;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    width: 100%;
+    background: #dddbdd;
+}
+
+.input button {
+    padding: 10px 40px;
+    font-size: 19px;
+    font-weight: 550;
+    background: tomato;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.input button:hover {
+    background-color: rgb(240, 46, 12);
+}
+
+.tasks {
+    margin-top: 2rem;
+
+}
+
+.mainLi {
+    display: flex;
+    align-items: center;
+    background-color: rgb(218, 221, 221);
+    border-radius: 3px;
+    margin-top: 1rem;
+    padding: 4px;
+}
+
+li {
+    list-style: none;
+    font-size: 18px;
+    background-color: rgb(218, 221, 221);
+    border-radius: 3px;
+    padding: 2px 5px;
+    width: 100%;
+    overflow-wrap: break-word;
+    display: flex;
+    text-align: center;
+    position: relative;
+    padding-left: 22px;
+}
+
+li::before {
+    content: ' ';
+    width: 20px;
+    height: 20px;
+    background-image: url(/img/unchek.png);
+    position: absolute;
+    top: 3px;
+    left: -2px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+span {
+    content: ' ';
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background-image: url(/cros.png);
+    background-size: cover;
+    transition: 200ms;
+    border-radius: 100%;
+
+}
+span:hover{
+    background-color: #b4afaf;
+}
+
+@media screen and (max-width: 1000px) {
+    .main {
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        width: 60%;
+        background: #fff;
+        border-radius: 5px;
+        padding: 30px;
+        text-align: center;
+
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .main {
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        width: 80%;
+        background: #fff;
+        border-radius: 5px;
+        padding: 30px;
+        text-align: center;
+
+    }
+
+    .input button {
+        padding: 10px 30px;
+        font-size: 19px;
+        font-weight: 550;
+        background: tomato;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        width: 95%;
+        background: #fff;
+        border-radius: 5px;
+        padding: 30px;
+        text-align: center;
+
+    }
+
+    li {
+        list-style: none;
+        font-size: 13px;
+        background-color: rgb(218, 221, 221);
+        border-radius: 3px;
+        /* padding: 1px 2px; */
+        padding-left: 21px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+    }
+
+    li::before {
+        content: ' ';
+        width: 17px;
+        height: 17px;
+        background-image: url(/img/unchek.png);
+        position: absolute;
+        top: 1px;
+        left: -1px;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    span {
+        content: ' ';
+        width: 13px;
+        height: 13px;
+        cursor: pointer;
+        background-image: url(/cros.png);
+        background-size: cover;
+
+    }
+
+    .mainLi {
+        display: flex;
+        align-items: center;
+        background-color: rgb(218, 221, 221);
+        border-radius: 3px;
+        margin-top: 1rem;
+        padding: 2px;
+    }
+
+    .input button {
+        padding: 10px 20px;
+        font-size: 15px;
+        font-weight: 500;
+        background: tomato;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .input input {
+        font-size: 15px;
+        font-weight: 500;
+        padding: 10px 20px;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        width: 100%;
+        background: #dddbdd;
+    }
+
+}
+
+@media screen and (max-width:300px) {
+    .main {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        width: 95%;
+        background: #fff;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+
+    }
+
+    .input button {
+        padding: 5px 10px;
+        font-size: 10px;
+        font-weight: 500;
+        background: tomato;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .input input {
+        font-size: 10px;
+        font-weight: 500;
+        padding: 5px 10px;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        width: 100%;
+        background: #dddbdd;
+    }
+
+}
